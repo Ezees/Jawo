@@ -1,0 +1,250 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Jawolaray
+email: wertylaray@gmail.com
+description: >- # Welcome to Jawolaray - your ultimate destination for the newest and most exciting online casino slots in the Philippines! Dive into a world of thrilling games, big wins, and endless entertainment right at your fingertips. At Jawolaray, we bring you a seamless and fast-paced gaming experience that will keep you on the edge of your seat.
+  Featuring a dynamic feed of the latest online casino slots, our site is meticulously designed to cater to your every gaming need. Whether you're a seasoned player or a newcomer to the world of online gambling, Jawolaray offers a wide range of slot games that guarantee non-stop fun and excitement. Our team is dedicated to curating only the best and most innovativ4e slot games on the market, ensuring that you have access to top-quality content at all times. With a focus on user experience and SEO optimization, Jawolaray promises swift and easy navigation, allowing you to explore our extensive collection of online slots with just a few clicks. In the vibrant realm of online casinos, Jawolaray stands out as your go-to hub for all things related to casino slots in the Philippines. Whether you're seeking classic favorites or cutting-edge releases, our site is your gateway to a world of endless possibilities and big wins.Join us at Jawolaray and embark on a gaming journey like never before. Get ready to spin the reels, chase those jackpots, and immerse yourself in the electrifying world of online casino slots. Fasten your seatbelt and get ready for an exhilarating ride - Jawolaray is here to redefine your online gaming experience!.
+baseurl: "https://ezees.github.io/" # the subpath of your site, e.g. /blog
+
+url: "https://ezees.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: werty35169010
+github_username: Ezees
+minima: default
+search: true
+
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+remote_theme: minima
+
+# Liquid
+strict_front_matter: true
+liquid:
+  error_mode: strict
+
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Output settings
+permalink: /:categories/:title/ # specifies how the URL of each post is structured on your website
+paginate: 10 # amount of posts to display per page
+paginate_path: /page:num/ # the path structure for paginated pages, where :num: is the page number
+timezone: Philipines/Manila # set your desired timezone to display dates and times
+ # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Author 
+
+author:
+  name   : "jawo Laray"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Knowing how to motivate yourself can help you accomplish anything you set your mind to."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/@werty35169010"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://Ezees/github.io/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/mrtong26"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/Mr.tong26?mibextid=ZbWKwL"
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/@werty35169010"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://Ezees/github.io/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/mrtong26"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/Mr.tong26?mibextid=ZbWKwL"
+
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
+  pets:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _recipes
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: single
+      author_profile: true
+      share: true
+  # _pets
+  - scope:
+      path: ""
+      type: pets
+    values:
+      layout: single
+      author_profile: true
+      share: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+  enabled:
+     - categories
+     - tags
+  category: archive-taxonomy
+   /categories/:name/
+tag: archive-taxonom
+   /tags/:name/ 
+#twitter_username: ezees
+#github_username:  Ezees
+
+# Build settings
+#theme: minima
+#plugins:
+  - jekyll-feed
+
+  - jekyll-seo-tag
+
+# Build settings
+#markdown: kramdown
+#highlighter: rouge
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
